@@ -1,0 +1,61 @@
+Name,Vial,Patch,Mpatch,Flag,Year,Date,Check,Species,Capt,Tag_start,Mark,Sex,Weight,Colour,White.spot,WS.position,Testes,Vagina,Pubic.bone,Pregnant,Nipples,Lactating,Mites,Ticks,Fleas,Fur.loss,Biopsy,Blood,Isolate,Severity,Bleeder,Comments,Urinate,Deficate,Resists,Pushing,Bites,Squeaks,Handling,Docility
+vc,vc01,sgi39,,aa05,2020,2020-07-20,1,wv,n,,517254,m,85,bl/br,2,head,ns,NA,NA,NA,NA,NA,0,0,0,0,1,1,1,m,xl,,1,1,0,0,0,1,0,3
+vc,vc02,sgi39,,p4,2020,2020-07-20,1,wv,n,,516709,m,215,bl/br,1,head,s,NA,NA,NA,NA,NA,0,10,0,5,1,1,1,m,xl,,1,1,1,0,1,1,1,6
+vc,vc03,sgi39,,cl78,2020,2020-07-20,1,wv,n,,10502190,m,85,bl,2,head,ns,NA,NA,NA,NA,NA,0,1,1,0,1,1,1,m,xl,,0,0,1,0,1,2,1,5
+vc,vc04,sgi39,,p26,2020,2020-07-20,1,wv,n,,566138,m,65,bl,2,head,ns,NA,NA,NA,NA,NA,0,1,0,0,1,1,1,m,xl,,1,1,1,0,0,2,1,6
+vc,vc05,sgi44,,da8,2020,2020-07-20,1,wv,n,,5668018,f,245,bl,1,head,NA,p,open,Y,2,N,0,0,1,0,0,1,1,m,xl,,1,0,1,0,1,1,1,5
+vc,vc06,sgi44,,f09,2020,2020-07-20,1,wv,n,,10504883,f,130,bl,1,head,NA,p,closed,N,1,N,0,2,0,0,1,1,1,m,xl,,1,1,1,1,2,2,2,10
+vc,vc07,led01,,blank,2020,2020-07-27,1,wv,n,,10847528,m,130,bl,1,head,ms,NA,NA,NA,NA,NA,0,2,0,0,1,1,0,m,lm,,1,1,1,1,2,1,1,8
+vc,vc08,led01,,cl25,2020,2020-07-27,1,wv,n,,10872452,f,110,bl,0,NA,NA,np,closed,N,1,N,0,3,0,0,1,1,1,m,lm,,0,1,1,1,1,1,1,6
+vc,vc09,led01,,cl81,2020,2020-07-27,1,wv,n,,10871987,m,125,bl,1,head,ms,NA,NA,NA,NA,NA,1,2,3,15,1,1,1,m,lm,"Had a kinky tail and broken toe, poor mr vole ",1,0,1,1,2,1,1,7
+vc,vc10,led0708,,da4,2020,2020-07-27,1,wv,n,,10875950,m,125,bl,0,NA,ms,NA,NA,NA,NA,NA,2,2,0,0,1,0,0,NA,NA,,1,1,1,1,2,1,2,9
+vc,vc11,led0708,,cl78,2020,2020-07-27,1,fv,n,,"ls, lh ",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,escaped ,NA,NA,NA,NA,NA,NA,NA,NA
+vc,,led01,,x25,2020,2020-07-27,2,wv,r,,10872452,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,
+vc,,led01,,p63,2020,2020-07-28,2,wv,r,,5664242,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,
+vc,,led01,,cl81,2020,2020-07-28,2,wv,r,,10871987,,,,,,,,,,,,,,0,,,,,,,Kinky tail returns!,,,,,,,,
+vc,,led0708,,cl78,2020,2020-07-28,2,wv,r,,10875950,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,
+vc,vc12,led09,,b4,2020,2020-07-31,3,wv,n,,10877360,m,95,bl,3,head,ns,NA,NA,NA,NA,NA,0,1,2,0,1,0,0,NA,NA,Very cute with white spot,0,0,0,0,1,2,0,3
+vc,vc13,led09,,p37,2020,2020-07-31,3,wv,n,,10864741,f,220,bl/br,0,NA,NA,p,open,Y,2,N ,0,0,4,0,1,0,0,NA,NA,pretty chill for pregnant female,0,1,1,0,0,2,0,4
+vc,vc14,led11,,cl33,2020,2020-07-31,3,wv,n,,5595483,m,,bl,1,other,s,NA,NA,NA,NA,NA,0,1,1,0,0,0,0,NA,NA,white spot location was a few hairs on head and back. Bit me and escaped before I could get wieght and biopsy ,1,1,1,1,2,2,2,10
+vc,vc15,led11,,p42,2020,2020-07-31,3,wv,n,,5663758,m,55,bl,1,other,ns,NA,NA,NA,NA,NA,3,0,0,0,1,0,0,NA,NA,white spot location was a few hairs on head and back.  ,1,1,1,1,0,2,0,6
+vc,,led11,,blank,2020,2020-07-31,3,wv,r,,5675037,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+vc,vc16,led11,,blank ,2020,2020-07-31,3,wv,n,,6470304,m,60,bl,1,head,ns,NA,NA,NA,NA,NA,5,1,0,0,1,0,0,NA,NA,,1,0,1,1,0,2,0,5
+vc,,cro0708,,x4,2020,2020-08-02,2,wv,r,,5597589,,230,,,,,,,,,,,,0,,,,,,,Vole with half tail missing,,,,,,,,
+vc,,cro0708,,cl43,2020,2020-08-03,3,wv,r,,5597753,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,
+vc,,cro0708,,blank,2020,2020-08-03,3,wv,r,,10864501,,,,,,,,,,,,,,0,,,,,,,was marked with hair clipping rh. Put new pit tag in: 10864501,,,,,,,,
+vc,,cro0708,,x4,2020,2020-08-03,3,wv,r,,5597589,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+vc,,cro0708,,b19,2020,2020-08-03,3,wv,r,,10863945,m,180,bl,2,head,s,NA,NA,NA,NA,NA,0,7,0,0,1,1,1,m,lm,fully processed the recapture as escaped the last time after pit tagging,1,1,1,1,2,2,2,10
+vc,vc17,ledx,,p68,2020,2020-08-04,3,wv,n,,10866168,m,60,bl,1,head,ns,NA,NA,NA,NA,NA,0,1,0,0,1,0,0,NA,NA,,1,1,0,0,1,2,0,5
+vc,,ledx,,a55,2020,2020-08-04,3,wv,r,,10871965,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,
+vc,vc23,led2425,,p46,2020,2020-08-06,1,wv,nr,,10505423,f,240,,0,NA,NA,p,open,Y,2,Y,0,0,0,0,1,0,0,,,Colour- ginger,0,1,1,0,2,1,1,6
+vc,vc18,led2425,,ab04,2020,2020-08-06,1,wv,n,,5598346,m,200,bl/br,1,back,s,NA,NA,NA,NA,NA,0,1,0,0,1,0,0,,,,0,1,0,0,0,0,0,1
+vc,vc19,led2425,,a55,2020,2020-08-06,1,fv,n,,l.s,m,25,,,,ns,NA,NA,NA,NA,NA,0,0,0,0,1,0,0,,,,,,,,,,,0
+vc,vc20,led2425,,p72,2020,2020-08-06,1,wv,n,,6498073,m,70,bl,1,head,ns,NA,NA,NA,NA,NA,4,0,0,0,1,0,0,,,,0,1,0,0,1,1,0,3
+vc,vc21,led2425,,blank,2020,2020-08-06,1,wv,n,,10864769,m,70,bl/br,0,,ms,NA,NA,NA,NA,NA,0,0,0,0,1,0,0,,,,1,1,1,1,1,1,1,7
+vc,vc22,led2425,,p44,2020,2020-08-06,1,wv,n,,5599672,m,80,bl,2,other,ns,NA,NA,NA,NA,NA,3,1,0,0,1,0,0,,,white spot- tail and head,0,0,0,0,1,1,0,2
+vc,vc23,led2425,,k37,2020,2020-08-07,2,wv,r,,10505423,,,,,,,,,,,,,,0,,,1,1,m,lm,,,,,,,,,0
+vc,vc24,led2425,,p46,2020,2020-08-07,2,wv,n,,6473022,f,90,bl,2,other,NA,p,closed,N,0,N ,0,0,0,0,1,1,1,m,lm,white spot- tail and head,1,1,1,1,0,1,0,5
+vc,vc25,led2425,,p48,2020,2020-08-07,2,wv,n,,10864052,f,160,bl,1,back,NA,p,open,Y,1,N ,0,0,0,0,1,1,1,m,lm,,1,1,1,1,2,1,2,9
+vc,,led2425,,b23,2020,2020-08-07,2,wv,r,,6479878,,,,,,,,,,,,,,0,,,1,1,m,lm,,,,,,,,,0
+vc,,led2425,,b28,2020,2020-08-07,2,wv,r,,6470025,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,0
+vc,,led2425,,cl88,2020,2020-08-07,2,wv,r,,8673949,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,0
+vc,vc26,led2425,,b66,2020,2020-08-07,2,wv,n,,5672821,m,25,bl,2,other,ns,NA,NA,NA,NA,NA,0,0,0,0,1,,,,,"white spot- head, tail",0,0,1,1,2,2,1,7
+vc,vc27,led2425,,p15,2020,2020-08-07,2,wv,n,,10525795,f,175,bl/br,1,head,NA,p,closed,Y,0,N ,NA,0,0,0,1,0,0,,,,0,1,1,1,1,1,1,6
+vc,vc28,led2425,,ab01,2020,2020-08-07,2,wv,n,,5598779,m,135,bl,0,,s,NA,NA,NA,NA,NA,0,0,1,0,1,1,1,m,lm,,1,1,1,1,0,0,2,6
+vc,elb21,cro1015,,blue,2020,2020-08-08,3,wv,n,,5666864,m,100,bl,1,back,ms,NA,NA,NA,NA,NA,2,2,0,0,1,1,1,m,lm,,1,1,1,1,0,1,0,5
+vc,,cro1015,,p20,2020,2020-08-08,3,fv,r,,l.s,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,0
+vc,vc29,cro1015,,p15,2020,2020-08-08,3,fv,n,,,m,40,,,,s,NA,NA,NA,NA,NA,0,2,1,0,,1,0,m,lm,stubby feet,,,,,,,,0
+vc,,cro1015,,p52,2020,2020-08-08,3,wv,r,,10864801,,,,,,,,,,,,,,0,,,1,0,m,lm,,,,,,,,,0
+vc,,cro1015,,b13,2020,2020-08-08,3,fv,r,,l.h,,,,,,,,,,,,,,0,,,1,1,m,lm,,,,,,,,,0
+vc,vc30,cro1015,,x25,2020,2020-08-08,3,wv,n,,5594488,f,145,bl,1,head,NA,p,open,Y,1,N ,0,2,0,0,1,1,1,m,lm,,0,1,1,0,2,0,2,6
+vc,,cro1015,,a15,2020,2020-08-08,3,wv,r,,5674075,,,,,,,,,,,,,1,0,,,1,1,m,lm,,,,,,,,,0
+vc,,cro1015,,cl64,2020,2020-08-08,3,fv,r,,"l.s, r.s",,,,,,,,,,,,,,2,,,0,0,,,,,,,,,,,0
+vc,,cro1015,,f04,2020,2020-08-08,3,wv,,,,,,,,,,,,,,,,,,,,0,0,,,escaped ,,,,,,,,0
+vc,,cro1015,,ab03,2020,2020-08-08,3,fv,r,,r.s,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,,0
+vc,,cro1015,,cl58,2020,2020-08-08,3,fv,n,,,f,,,,,NA,p,closed,Y,4,Y,,,,,,,,,,sadly died,,,,,,,,0
+vc,,cro1015,,blank,2020,2020-08-08,3,fv,r,,r.h,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+vc,vc31,sgi30,,x5,2020,2020-08-17,1,wv,n,,5668931,m,90,bl,1,head,ns,NA,NA,NA,NA,NA,4,0,2,0,1,0,0,NA,NA,,0,1,1,1,2,0,2,7
+vc,vc32,sgi30,,a54,2020,2020-08-17,1,wv,n,,6487359,m,75,bl/br,1,head,ns,NA,NA,NA,NA,NA,1,0,0,0,1,0,0,NA,NA,Double PIT tagged. Second tag was 5673892,1,0,1,0,1,2,1,6
+vc,vc33,sgi31,,p77,2020,2020-08-17,1,wv,n,,5673524,m,130,bl,1,head,s,NA,NA,NA,NA,NA,2,0,2,0,1,0,0,NA,NA,Vicious! ,1,0,1,1,2,1,2,8
+vc,vc34,sgi3637,,x25,2020,2020-08-19,3,wv,n,,6490811,m,70,bl,0,,ns,NA,NA,NA,NA,NA,0,0,0,0,1,0,0,NA,NA,,1,0,0,0,0,1,0,2
+vc,,sgi3637,,da6,2020,2020-08-19,3,wv,r,,5668043,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,
