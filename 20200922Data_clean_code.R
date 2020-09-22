@@ -336,5 +336,5 @@ False.recapts<- Name_comparison[Name_comparison$matches==FALSE,]
 write.csv(Data_cleaned,"Data_cleaned_14.09.2020.csv")
 
 data<-read.csv("Data_corrected.csv")
-data$Vial<-toupper(data$Vial)
+data$Vial<-tolower(data$Vial)
 write.csv(data,"Data_corrected.csv")
