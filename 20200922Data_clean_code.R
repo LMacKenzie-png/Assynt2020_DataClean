@@ -1,5 +1,5 @@
 ### Load all data 
-setwd("C://Users//laura//Dropbox//Assynt 2020//Data sheets//Data_clean")
+setwd("~/Assynt2020_DataClean")
 
 George<-read.csv("Assynt_trapping_entry_2020_GP.csv")
 George<-George[!George$Name=="",]
@@ -261,7 +261,7 @@ Data$Corrected.Mark[Data$Tag_start=="6502085"]<-"10502085"
 Data$Corrected.Mark[Data$Vial=="elb37"]<-"5806504" 
 Data$Corrected.Mark[Data$Tag_start=="6484273"]<-"5674301" #process of elimination
 Data$Comments[Data$Tag_start=="5674301" ]<-"pit tag lost and replaced with 6484273" 
-Data$Corrected.Mark<-ifelse(is.na(Data$Corrected.Mark),Data$Tag_start,Data$Corrected.Mark)# any correct marks are put into 
+Data$Corrected.Mark<-ifelse(is.na(Data$Corrected.Mark),Data$Tag_start,Data$Corrected.Mark)# any correct are put into 
 
 
 write.csv(Data,"Data_corrected.csv")
@@ -335,3 +335,6 @@ False.recapts<- Name_comparison[Name_comparison$matches==FALSE,]
 
 write.csv(Data_cleaned,"Data_cleaned_14.09.2020.csv")
 
+data<-read.csv("Data_corrected.csv")
+data$Vial<-toupper(data$Vial)
+write.csv(data,"Data_corrected.csv")
