@@ -1,20 +1,21 @@
 # ASSYNT TRAPPING DATA CORRECTION CODE ####
-
+#edited 23/09/2020
 # This script is used to check that all trapping data relating to water vole surveys in Assynt
 # has the correct georeferencing information and that the recorded block and patch names 
 # correspond with blocks and patches defined in the survey design 
 
 
 # SESSION SETUP AND LOADING OF FILES ####
+
 # Load required packages ####
 library(openxlsx) # used for reading .xlsx files
 library(lubridate)
 
 # Set Working Directory ####
-setwd("/Users/r01lm19/Dropbox/H2OVOLE-Data")
+setwd("~/Assynt2020_DataClean")
 
 # Load required files ####
-traps <- read.xlsx("Assynt master trapping.xlsx",2) #10517
+traps <- read.xlsx("20200923Assynt master trapping.xlsx") #10788
 
 # Add a unique identifier to each entry in the dataset
 traps$ID <- c(1:nrow(traps))
@@ -69,7 +70,7 @@ update.Comments <- function(data) {
 
 
 # Read in reference files for correct codes and data values, stored as Microsoft Excel spreadsheet
-refList <- read.xlsx("/Users/r01lm19/Dropbox/H2OVOLE-Data/The Big Data Clean Up 2019/Assynt_Data_Reference.xlsx")
+refList <- read.xlsx("Assynt_Data_Reference.xlsx")
 
 str(traps)
 
@@ -296,6 +297,7 @@ no_match$network
   traps[rowCorrection, "Network"] <- "cro"
 }
 
+unique(traps$Network)
 # Update Comments and Corrections
 traps <- update.Comments(traps)
 
@@ -410,6 +412,7 @@ species$matches <- species$species %in% speciesRef # add a new TRUE/FALSE column
 no.match <- species[species$matches == FALSE, "species"] #  identify the values which do not appear in the reference list
 no.match # The only remaining mismatch should be 'wv' which is acceptable.
 
+unique(traps$Species)
 # Update Comments and Corrections
 traps <- update.Comments(traps)
 
@@ -772,7 +775,7 @@ length(rowCheck)
 
 # Standardise 'Vial' data
 traps$Vial <- tolower(traps$Vial) # all letters to lower case
-
+unique(traps$Vial)
 # Identify entries with less than 4 digits after initials and correct with adding 0's.
 
 # Vial values containing only 1 digit
@@ -982,6 +985,7 @@ traps[rowCorrection, "Pregnant"] <- "Y"
 rowCorrection <- which(traps$Pregnant == "0" | traps$Pregnant == "O" | traps$Pregnant == "NO" | traps$Pregnant == "NO ")
 traps[rowCorrection, "newCorrections"] <- paste0("'Pregnant' corrected from ", traps[rowCorrection, "Pregnant"], ".")
 traps[rowCorrection, "Pregnant"] <- "N"
+unique(traps$Pregnant)
 
 traps <- update.Comments(traps)
 
@@ -1193,6 +1197,7 @@ traps <- update.Comments(traps)
 # Males with 'Lactating' not equal to NA
 ind <- which(traps$Sex == "m" & is.na(traps$Lactating) == FALSE)
 traps[ind, ]
+
 # No conflicting data and 'Lactating' values can be corrected to NA
 rowCorrection <- which(traps$Sex == "m" & is.na(traps$Lactating) == FALSE)
 traps[rowCorrection, "newCorrections"] <- paste0("'Lactating' corrected from ", traps[rowCorrection, "Lactating"],
@@ -1250,8 +1255,9 @@ traps[rowCorrection, "Colour"] <- "bl"
 rowCorrection <- which(traps$Colour == "na")
 traps[rowCorrection, "newCorrections"] <- paste0("Colour corrected from ", traps[rowCorrection, "Colour"], ".")
 traps[rowCorrection, "Colour"] <- NA
-
+unique(traps$Colour)
 traps <- update.Comments(traps)
+
 # WHITE.SPOT ####
 #should be 0,1,2,3,4 depending on strength
 unique(traps$White.spot)
@@ -1266,14 +1272,16 @@ traps[rowCorrection, "White.spot"] <- 0
 rowCorrection <- which(traps$White.spot == "Y"|traps$White.spot == "y")
 traps[rowCorrection, "newCorrections"] <- paste0("White.spot corrected from ", traps[rowCorrection, "White.spot"], ".")
 traps[rowCorrection, "White.spot"] <- 1
-
+unique(traps$White.spot)
 traps <- update.Comments(traps)
+
 # WS.POSITION ####
 unique(traps$WS.position)# not standardised
 
 # BRUSHED ####
 unique(traps$Brushed)
 traps$Brushed<-toupper(traps$Brushed)
+unique(traps$Brushed)
 
 # MITES ####
 #supposed to be 0-10
@@ -1311,8 +1319,9 @@ rowCorrection <- which(traps$Mites == "70")
 traps[rowCorrection, "newCorrections"] <- paste0("Mites corrected from ", traps[rowCorrection, "Mites"], ".")
 traps[rowCorrection, "Mites"] <- 7
 }
-
+unique(traps$Mites)
 traps <- update.Comments(traps)
+
 # TICKS ####
 unique(traps$Ticks)
 traps$Ticks <- gsub(pattern = "\\+", replacement = "", x = traps$Ticks)
@@ -1372,6 +1381,7 @@ traps[rowCorrection, "newCorrections"] <- paste0("Faeces corrected from ", traps
 traps[rowCorrection, "Faeces"] <- "N"
 
 traps <- update.Comments(traps)
+
 # BLOOD ####
 #binary 1 and 0
 unique(traps$Blood)
@@ -1466,8 +1476,8 @@ unique(traps$Fur_clip)
 # 2001 to 2003 have data that does not appear in other years:
 #   Gene.samp
 #   Reproductive
-write.xlsx(Assynt_Trapping_GeneSamp_2001_2003,"The Big Data Clean Up 2019/Assynt_Trapping_GeneSamp_2001_2003.xlsx")
-write.xlsx(Assynt_Trapping_Reproductive_2001_2003,"The Big Data Clean Up 2019/Assynt_Trapping_Reproductive_2001_2003.xlsx")
+write.xlsx(Assynt_Trapping_GeneSamp_2001_2003,"Assynt_Trapping_GeneSamp_2001_2003.xlsx")
+write.xlsx(Assynt_Trapping_Reproductive_2001_2003,"Assynt_Trapping_Reproductive_2001_2003.xlsx")
 
 
-write.xlsx(trapsClean,"The Big Data Clean Up 2019/Assynt_master_traps_corrected_WB_Temp.xlsx")
+write.xlsx(trapsClean,"Assynt_master_traps_corrected20200923.xlsx")
