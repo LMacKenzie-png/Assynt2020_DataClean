@@ -1,5 +1,5 @@
 #Laura Mackenzie 
-#23/09/2020
+#first made: 23/09/2020
 #trapping data merge and clean 
 
 #libaries necessary
@@ -124,5 +124,7 @@ unique(Points$check_5)%in%unique(Assynt_Data_Reference$check_x)#all correct
 
 ###check comments
 unique(Points$Comment)
+
+write.csv(Points, "Assynt_trapping_data_2020_clean.csv")
 
 ####so far I would say this is clean enough to now be merged to Assynt points
