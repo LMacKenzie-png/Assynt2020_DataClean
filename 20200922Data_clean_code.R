@@ -335,6 +335,29 @@ False.recapts<- Name_comparison[Name_comparison$matches==FALSE,]
 
 write.csv(Data_cleaned,"Data_cleaned_14.09.2020.csv")
 
-data<-read.csv("Data_corrected.csv")
-data$Vial<-tolower(data$Vial)
-write.csv(data,"Data_corrected.csv")
+####fv renaming 
+Data<-read.csv("Data_cleaned_14.09.2020.csv")#noticed that fv had not been renamed yet 
+fv<-Data[Data$Species=="fv",] #only look at fv data
+fv_unnamed<-fv[fv$Vial==""&fv$Capt=="r",] 
+fv_new<-fv[fv$Capt=="n"&!fv$Vial=="",] #there are some fv which did not reciave a name so I excluded those
+
+#comparing the unnamed and named individuals by looking at fv_unnamed,check that only one vial name comes up
+#clippings should be unique within patches 
+fv_new[fv_new$Patch=="cro1015"&fv_new$Mark=="rh","Vial"] #lm233
+fv_new[fv_new$Patch=="cro1015"&fv_new$Mark=="ls","Vial"] #elb22
+fv_new[fv_new$Patch=="cro1015"&fv_new$Mark=="lh","Vial"] #elb28
+fv_new[fv_new$Patch=="cro1015"&fv_new$Mark=="ls,rs","Vial"] #gp216
+fv_new[fv_new$Patch=="cro1015"&fv_new$Mark=="rs","Vial"] #elb26
+
+#in fv_unnamed fill in th correct vial name based on the query run 
+fv_unnamed[fv_unnamed$Patch=="cro1015"&fv_unnamed$Mark=="rh","Vial"]<-"lm233"
+fv_unnamed[fv_unnamed$Patch=="cro1015"&fv_unnamed$Mark=="ls","Vial"]<-"elb22"
+fv_unnamed[fv_unnamed$Patch=="cro1015"&fv_unnamed$Mark=="lh","Vial"]<-"elb28"
+fv_unnamed[fv_unnamed$Patch=="cro1015"&fv_unnamed$Mark=="ls,rs","Vial"]<-"gp216"
+fv_unnamed[fv_unnamed$Patch=="cro1015"&fv_unnamed$Mark=="rs","Vial"]<-"elb26"
+
+#remerge fv data 
+fv_renamed<-rbind(fv[fv$Capt=="n"|fv$Vial=="hbNA"|fv$Vial=="elb33",],fv_unnamed) # merge fv data recpt and new capt together, include HBNA and elb33 as they are not in the unnamed fiel
+Data_fv_rename<-rbind(fv_renamed,Data[!Data$Species=="fv",])
+
+write.csv(Data_fv_rename,"20200923Data_cleaned.csv")
