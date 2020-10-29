@@ -1,3 +1,4 @@
+#UPDATE 29/10/2020 found hb7 and hb8 missing changed hb5 and gp214 to new captures
 ### Load all data 
 setwd("~/Assynt2020_DataClean")
 
@@ -175,6 +176,8 @@ Data$Docility<-rowSums(Data[,c(34:40)],na.rm=T)
 Data$Capt[Data$Vial=="gp215"]<-"n" #clearly new not recapture
 Data$Tag_start[Data$Vial=="elb02"]<-"5667730" #elb02 elb03 have same tag according to match ups this is the other one 
 Data$Tag_start[Data$Vial=="lm241"]<-"NA" #duplicated number for two voles, likely that later one was written down from a wrapper
+Data$Capt[Data$Vial=="gp214"]<-"n" 
+Data$Capt[Data$Vial=="hb5"]<-"n" 
 
 traps_wv<-Data[Data$Species=="wv",] #only wv
 traps_wv_new<-traps_wv[traps_wv$Capt=="n"|traps_wv$Capt=="nr",] 
@@ -263,7 +266,6 @@ Data$Corrected.Mark[Data$Tag_start=="6484273"]<-"5674301" #process of eliminatio
 Data$Comments[Data$Tag_start=="5674301" ]<-"pit tag lost and replaced with 6484273" 
 Data$Corrected.Mark<-ifelse(is.na(Data$Corrected.Mark),Data$Tag_start,Data$Corrected.Mark)# any correct are put into 
 
-
 write.csv(Data,"Data_corrected.csv")
 
 traps <- read.csv("Data_corrected.csv",header=T)
@@ -319,7 +321,7 @@ for(i in 1:length(missing_tags))
 }
 
 All.other<-traps[!traps$Species=="wv",,]
-wv.other<-traps_wv[traps_wv$Tag_start==""|is.na(traps_wv$Tag_start),]
+wv.other<-traps_wv[traps_wv$Tag_start==""|is.na(traps_wv$Tag_start)|traps_wv$Tag_start=="ls"|traps_wv$Tag_start=="rs",]
 
 Data_cleaned<-rbind(named_recaps_updated,All.other,wv.other)
 
@@ -361,3 +363,4 @@ fv_renamed<-rbind(fv[fv$Capt=="n"|fv$Vial=="hbNA"|fv$Vial=="elb33",],fv_unnamed)
 Data_fv_rename<-rbind(fv_renamed,Data[!Data$Species=="fv",])
 
 write.csv(Data_fv_rename,"20200923Data_cleaned.csv")
+
